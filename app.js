@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // EmailJS Configuration - Replace with your own credentials
     const EMAILJS_CONFIG = {
-        publicKey: '5mgTGGqqDwlV0uxOB', // Replace with your EmailJS public key
-        serviceId: 'InventoryApp', // Replace with your EmailJS service ID
-        templateId: 'template_bkok4uw' // Replace with your EmailJS template ID
+        publicKey: 'YOUR_EMAILJS_PUBLIC_KEY', // Replace with your EmailJS public key
+        serviceId: 'YOUR_EMAILJS_SERVICE_ID', // Replace with your EmailJS service ID
+        templateId: 'YOUR_EMAILJS_TEMPLATE_ID' // Replace with your EmailJS template ID
     };
     
     // Gmail API Configuration
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let isGmailSignedIn = false;
     
     // Initialize EmailJS
-    if (EMAILJS_CONFIG.publicKey !== 'YOUR_PUBLIC_KEY') {
+    if (EMAILJS_CONFIG.publicKey !== 'YOUR_EMAILJS_PUBLIC_KEY') {
         emailjs.init(EMAILJS_CONFIG.publicKey);
     }
     
