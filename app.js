@@ -490,6 +490,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create worksheet
         const ws = XLSX.utils.aoa_to_sheet(exportData);
         
+        // Auto-size column widths to prevent text cutoff
+        const colWidths = [
+            { wch: 25 }, // Item Name column - wider for long item names
+            { wch: 8 },  // Have column
+            { wch: 8 }   // Need column
+        ];
+        ws['!cols'] = colWidths;
+        
         // Create workbook
         const wb = XLSX.utils.book_new();
         const sheetName = `${weekDates.start.replace('/', '-')}_to_${weekDates.end.replace('/', '-')}`;
@@ -518,6 +526,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Create worksheet
         const ws = XLSX.utils.aoa_to_sheet(exportData);
+        
+        // Auto-size column widths to prevent text cutoff
+        const colWidths = [
+            { wch: 25 }, // Item Name column - wider for long item names
+            { wch: 8 },  // Have column
+            { wch: 8 }   // Need column
+        ];
+        ws['!cols'] = colWidths;
         
         // Create workbook
         const wb = XLSX.utils.book_new();
